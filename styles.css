@@ -15,10 +15,15 @@ body {
 /* NAVBAR */
 header {
     width: 100%;
-    background: #000;
+    background: rgba(0, 0, 0, 1);
     position: sticky;
     top: 0;
     z-index: 31;
+    transition: background 0.3s ease;
+}
+
+header.scrolled {
+    background: #000;
 }
 
 nav {
@@ -30,9 +35,14 @@ nav {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo img {
+    height: 3rem;
+    width: auto;
+    transition: height 0.3s ease;
+}
+
+header.scrolled .logo img {
+    height: 2rem;
 }
 
 .nav-links {
@@ -66,7 +76,7 @@ nav {
 #hero {
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('img/portada.jpg');
+        url('img/portada.png');
     background-size: cover;
     background-position: center;
     
@@ -125,7 +135,7 @@ nav {
     margin: 0 auto;
 }
 
-/* CARRUSEL PREMIUM */
+/* CARRUSEL */
 .carousel-container {
     position: relative;
     max-width: 1200px;
@@ -271,6 +281,13 @@ nav {
     color: white;
     padding: 1rem;
     border-radius: 8px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
 }
 
 .contact-btn {
