@@ -15,7 +15,7 @@ body {
 /* NAVBAR */
 header {
     width: 100%;
-    background: rgba(0, 0, 0, 1);
+    background: rgba(0, 0, 0, 0);
     position: sticky;
     top: 0;
     z-index: 31;
@@ -75,23 +75,24 @@ header.scrolled .logo img {
 /* HERO */
 #hero {
     min-height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url('img/portada.png');
+    background: url('img/portada1.png');
     background-size: cover;
     background-position: center;
-    
+    position: relative;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-start;
 
-    text-align: center;
-    padding: 0 1rem;
+    text-align: left;
+    padding: 5rem 12rem 4rem;
 }
 
 #hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    text-align: left;
 }
 
 #hero p {
