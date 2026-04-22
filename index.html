@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio DJ - Olmos Nahuel</title>
+    <meta name="theme-color" content="#d82521">
+    <meta name="description" content="Portfolio de Nahuel Olmos. Reconocido DJ de Mendoza, Argentina con más de 10 años de experiencia.">
+    <link rel="icon" type="image/png" href="img/fav-icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Olmos Nahuel</div>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#biografia">Biografía</a></li>
+            <li><a href="#galeria">Galería</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Tu evento soñado</h1>
+        <p>DJ - Sonido - Iluminación - Más</p>
+        <a href="#galeria" class="cta-button">Ver Imágenes</a>
+    </section>
+
+    <section id="biografia">
+        <h2>Sobre mí</h2>
+        <p class="bio-text">
+            ¡Hola! Soy Olmos Nahuel, DJ de Mendoza orientado al open format tanto para eventos sociales como para clubes.
+        </p>
+    </section>
+
+    <section id="galeria">
+        <h2>Fotografías destacadas</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn left" id="btn-left">
+                <span>&#10094;</span>
+            </button>
+            <div class="carousel-track" id="carousel-track">
+                <img loading="lazy" src="img/IMG_20251205_115934_156.jpg" alt="Nahuel Olmos tocando">
+                <img loading="lazy" src="img/Nahu Olmos-05.jpg" alt="Sesión profesional">
+                <img loading="lazy" src="img/Nahu Olmos-15.jpg" alt="Sesión profesional">
+                <img loading="lazy" src="img/Nahu Olmos-08.jpg" alt="Sesión profesional">
+                </div>
+            <button class="carousel-btn right" id="btn-right">
+                <span>&#10095;</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form class="contact-form">
+            <input type="text" id="nombre-input" placeholder="Nombre" required>
+            <input type="email" id="email-input" placeholder="Email" required>
+            <textarea id="mensaje-input" placeholder="Mensaje" required></textarea>
+            
+            <button type="submit" class="contact-btn">Enviar por Email</button>
+            
+            <button type="button" id="whatsapp-btn" class="contact-btn" style="background-color: #25d366; margin-top: 10px; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                Consultar por WhatsApp
+            </button>
+        </form>
+    </section>
+</main>
+
+<section id="servicios">
+        <div class="evento-tipo">
+            <h2>Cumpleaños de XV y 18</h2>
+            <p class="bio-text">Energía total para las noches más esperadas.</p>
+            <div class="carousel-container">
+                <button class="carousel-btn left" id="btn-left-xv"><span>&#10094;</span></button>
+                <div class="carousel-track" id="track-xv">
+                    <img loading="lazy" src="img/xv-1.jpg" alt="Fiesta XV">
+                    <img loading="lazy" src="img/xv-2.jpg" alt="DJ en XV">
+                    <img loading="lazy" src="img/xv-3.jpg" alt="Pista XV">
+                </div>
+                <button class="carousel-btn right" id="btn-right-xv"><span>&#10095;</span></button>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <p>&copy; 2025 Olmos Nahuel. Todos los derechos reservados.</p>
+</footer>
+
+<script type= 'module' src="script.js"></script>
+
+</body>
+</html>
