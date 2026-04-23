@@ -35,12 +35,6 @@ nav {
     align-items: center;
 }
 
-.logo img {
-    height: 3rem;
-    width: auto;
-    transition: height 0.3s ease;
-}
-
 header.scrolled .logo img {
     height: 2rem;
 }
@@ -75,7 +69,7 @@ header.scrolled .logo img {
 /* HERO */
 #hero {
     min-height: 100vh;
-    background: url('img/portada1.png');
+    background: url('img/portada2.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -84,19 +78,29 @@ header.scrolled .logo img {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-
+    margin-top: -3rem;
+    padding-top: 5rem;
     text-align: left;
     padding: 5rem 12rem 4rem;
+    transition: background-position 0.3s ease;
 }
 
 #hero h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     text-align: left;
+    transition: font-size 0.3s ease;
 }
 
 #hero p {
     font-size: 1.2rem;
+    transition: font-size 0.3s ease;
+}
+
+#hero .logo {
+    width: 30rem;
+    margin-bottom: 1rem;
+    transition: width 0.3s ease;
 }
 
 .cta-button {
@@ -208,6 +212,19 @@ header.scrolled .logo img {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    #hero {
+        background-position: right center;
+        padding: 5rem 2rem 4rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
     .carousel-track img {
         width: 260px;
         height: 380px;
@@ -228,6 +245,7 @@ header.scrolled .logo img {
 
     .menu-icon {
         display: block;
+        margin-left: auto;
     }
 
     .nav-links {
@@ -258,6 +276,20 @@ header.scrolled .logo img {
         font-size: 1.2rem;
         display: block;
         padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero {
+        padding: 5rem 1.5rem 4rem;
+    }
+
+    #hero h1 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
     }
 }
 
