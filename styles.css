@@ -1,4 +1,19 @@
 /* RESET */
+:root {
+    --primary-color: #d82521;
+    --primary-hover: #741311;
+    --bg-dark: #000;
+    --bg-card: #111;
+    --text-light: #fff;
+    --text-muted: rgba(255, 255, 255, 0.9);
+    --border-color: #333;
+    --gap-sm: 1rem;
+    --gap-md: 2rem;
+    --gap-lg: 3rem;
+    --radius-sm: 5px;
+    --radius-md: 12px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -112,16 +127,85 @@ nav {
 
 /* BIO */
 #biografia {
-    padding: 4rem 2rem;
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
+    padding: var(--gap-lg) var(--gap-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-lg);
+}
+
+.about-image {
+    flex: 0 0 45%;
+    max-width: 45%;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    display: block;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--gap-md);
+    color: var(--text-light);
 }
 
 .bio-text {
     font-size: 1.1rem;
-    margin-top: 1rem;
+    margin-bottom: var(--gap-md);
     opacity: 0.9;
+    line-height: 1.8;
+}
+
+/* Responsive Bio */
+@media (max-width: 768px) {
+    #biografia {
+        padding: var(--gap-md) var(--gap-sm);
+    }
+
+    .about-container {
+        flex-direction: column;
+        gap: var(--gap-md);
+    }
+
+    .about-image {
+        order: 4;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-content {
+        order: 1;
+        flex: 0 0 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+        margin-bottom: var(--gap-sm);
+    }
+
+    .bio-text {
+        font-size: 1rem;
+        margin-bottom: var(--gap-sm);
+    }
+
+    .about-content .cta-button {
+        display: inline-block;
+    }
 }
 
 /* SECCIÓN GALERÍA */
