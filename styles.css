@@ -22,10 +22,6 @@ header {
     transition: background 0.3s ease;
 }
 
-header.scrolled {
-    background: #000;
-}
-
 nav {
     max-width: 1200px;
     margin: 0 auto;
@@ -33,10 +29,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-header.scrolled .logo img {
-    height: 2rem;
 }
 
 .nav-links {
@@ -223,6 +215,12 @@ header.scrolled .logo img {
 
     #hero p {
         font-size: 1rem;
+    }
+
+    #hero .logo {
+        width: 10rem;
+        margin-bottom: 1rem;
+        transition: width 0.3s ease;
     }
 
     .carousel-track img {

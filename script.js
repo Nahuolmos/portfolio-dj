@@ -25,8 +25,7 @@ activarCarrusel('track-xv', 'btn-left-xv', 'btn-right-xv');     // XV
 document.getElementById('whatsapp-btn').onclick = () => {
     const nombre = document.getElementById('nombre-input').value;
     const mensaje = document.getElementById('mensaje-input').value;
-    const miTelefono = "549261XXXXXXX"; // Tu número
-
+    const miTelefono = "5492615535624";
     if (!nombre || !mensaje) {
         alert("Completa los datos para contactarnos.");
         return;
