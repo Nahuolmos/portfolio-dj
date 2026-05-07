@@ -1,3 +1,4 @@
+
 /* RESET */
 :root {
     --primary-color: #d82521;
@@ -14,15 +15,24 @@
     --radius-md: 12px;
 }
 
+@font-face {
+    font-family: 'FuturaLT-Bold';
+    src: url('fonts/FuturaLT.ttf') format('ttf'),
+         url('fonts/FuturaLT-Bold.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'FuturaLT-Bold', sans-serif;
+    font-family: 'FuturaLT-Bold', Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #000;
+    background-color: var(--bg-dark);
     color: white;
     line-height: 1.6;
 }
@@ -30,7 +40,6 @@ body {
 /* NAVBAR */
 header {
     width: 100%;
-    background: rgba(0, 0, 0, 0);
     position: sticky;
     top: 0;
     z-index: 31;
@@ -169,43 +178,16 @@ nav {
     line-height: 1.8;
 }
 
-/* Responsive Bio */
-@media (max-width: 768px) {
-    #biografia {
-        padding: var(--gap-md) var(--gap-sm);
-    }
+.destacados-text{
+    font-size: 1rem;
+    margin-bottom: var(--gap-sm);
+    text-align: center;
+}
 
-    .about-container {
-        flex-direction: column;
-        gap: var(--gap-md);
-    }
-
-    .about-image {
-        order: 4;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-
-    .about-content {
-        order: 1;
-        flex: 0 0 100%;
-        width: 100%;
-        text-align: center;
-    }
-
-    .about-content h2 {
-        font-size: 2rem;
-        margin-bottom: var(--gap-sm);
-    }
-
-    .bio-text {
-        font-size: 1rem;
-        margin-bottom: var(--gap-sm);
-    }
-
-    .about-content .cta-button {
-        display: inline-block;
-    }
+.destacados-text h2{
+    font-size: 1.5rem;
+    margin-bottom: var(--gap-sm);
+    text-align: center;
 }
 
 /* SECCIÓN GALERÍA */
@@ -256,7 +238,7 @@ nav {
     height: 55px;
     border-radius: 50%;
     border: 2px solid #888;
-    background-color: #1a1a1a;
+    background-color: var(--bg-card);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -288,9 +270,16 @@ nav {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+    body {
+        background-image: url('img/fondo-movil.png') !important;
+        background-size: cover;
+        background-attachment: fixed; /* Para que el fondo quede quieto al scrollear */
+        background-position: center;
+    }
+    
     #hero {
         background-position: right center;
-        padding: 5rem 2rem 4rem;
+        padding: var(--gap-lg) var(--gap-sm) var(--gap-md);
     }
 
     #hero h1 {
@@ -359,21 +348,43 @@ nav {
         display: block;
         padding: 0.5rem;
     }
-}
 
-@media (max-width: 480px) {
-    #hero {
-        padding: 5rem 1.5rem 4rem;
+    #biografia {
+        padding: var(--gap-md) var(--gap-sm);
     }
 
-    #hero h1 {
-        font-size: 1.5rem;
+    .about-container {
+        flex-direction: column;
+        gap: var(--gap-md);
     }
 
-    #hero p {
-        font-size: 0.9rem;
+    .about-image {
+        order: 4;
+        flex: 0 0 100%;
+        max-width: 100%;
     }
-}
+
+    .about-content {
+        order: 1;
+        flex: 0 0 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2rem;
+        margin-bottom: var(--gap-sm);
+    }
+
+    .bio-text {
+        font-size: 1rem;
+        margin-bottom: var(--gap-sm);
+    }
+
+    .about-content .cta-button {
+        display: inline-block;
+    }
+}   
 
 /* CONTACTO */
 #contacto {
@@ -391,7 +402,7 @@ nav {
 
 .contact-form input,
 .contact-form textarea {
-    background: #111;
+    background: var(--bg-card);
     border: 1px solid #333;
     color: white;
     padding: 1rem;
