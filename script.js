@@ -36,13 +36,6 @@ const CONFIG = {
     
     eventos: [
         {
-            fecha: '2025-07-12',
-            lugar: 'Chirolas Bar',
-            ciudad: 'Mendoza',
-            hora: '21:00',
-            link: 'https://www.instagram.com/chirolas.bar/?hl=es'
-        },
-        {
             fecha: '2025-07-25',
             lugar: 'Chirolas Bar',
             ciudad: 'Mendoza',
@@ -319,19 +312,22 @@ function initContactForm() {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         
-        const nombre = document.getElementById('nombre-input').value;
-        const email = document.getElementById('email-input').value;
-        const mensaje = document.getElementById('mensaje-input').value;
+        const nombre = document.getElementById('nombre-input').value.trim();
+        const email = document.getElementById('email-input').value.trim();
+        const mensaje = document.getElementById('mensaje-input').value.trim();
         
         if (!nombre || !email || !mensaje) {
             alert('Por favor completa todos los campos');
             return;
         }
         
-        const subject = `Consulta de ${nombre}`;
-        const body = `Nombre: ${nombre}%0D%0AEmail: ${email}%0D%0A%0D%0AMensaje:%0D%0A${mensaje}`;
+        const recipientEmail = 'nahuolmosimpala@gmail.com';
+        const identifier = Date.now().toString().slice(-6);
+        const subject = `Consulta via web #${identifier}`;
+        const body = `Nombre: ${nombre}\nEmail: ${email}\n\nMensaje:\n${mensaje}`;
+        const mailtoUrl = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         
-        window.location.href = `mailto:nahuolmosimpala@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = mailtoUrl;
     });
     
     // WhatsApp
